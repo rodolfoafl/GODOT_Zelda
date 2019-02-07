@@ -18,6 +18,7 @@ var default_color
 
 func _ready():
 	if(TYPE == "Enemy"):
+		set_collision_mask_bit(1, 1)
 		set_physics_process(false)
 			
 	default_color = get_node("Sprite").modulate

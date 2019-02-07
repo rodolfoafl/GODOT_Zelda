@@ -3,8 +3,8 @@
 [ext_resource path="res://Tiledmaps/floor.tres" type="TileSet" id=1]
 [ext_resource path="res://Scenes/Player.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Scenes/Camera2D.tscn" type="PackedScene" id=3]
-[ext_resource path="res://Scenes/Enemy.tscn" type="PackedScene" id=4]
-[ext_resource path="res://Scenes/CanvasLayer.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Scenes/CanvasLayer.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Scenes/Enemy_tilemap.tscn" type="PackedScene" id=5]
 
 [node name="World" type="Node"]
 
@@ -41,12 +41,10 @@ health = 10
 visible = false
 current = true
 
-[node name="Enemy" parent="." index="3" instance=ExtResource( 4 )]
+[node name="CanvasLayer" parent="." index="3" instance=ExtResource( 4 )]
 
-position = Vector2( 197.338, 171.165 )
-speed = 20
-health = 5
+[node name="Enemies" parent="." index="4" instance=ExtResource( 5 )]
 
-[node name="CanvasLayer" parent="." index="4" instance=ExtResource( 5 )]
+tile_data = PoolIntArray( 655361, 0, 0, 720910, 0, 0, 983045, 0, 0 )
 
 
