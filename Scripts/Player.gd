@@ -3,6 +3,7 @@ extends "res://Scripts/Entity.gd"
 const TYPE = "Player"
 const DAMAGE = 1
 
+var coins = 0
 var is_attacking = false
 
 func _process(delta):
@@ -13,6 +14,8 @@ func _process(delta):
 			control_animation("walk")
 		elif(!is_attacking):
 			control_animation("idle")
+	coins = min(coins, 9)
+	health = min(health, 16)
 
 func _physics_process(delta):
 	if(health > 0):
@@ -40,11 +43,9 @@ func attack():
 
 func _on_SwordArea2D_body_entered(body):
 	if(body.name != "Player"):
-		print("enemy health: " + str(body.health))
 		body.health -= 1
 		if(body.health > 0):
 			body.get_hurt()
 		else:
 			body.die()
-		print("enemy health: " + str(body.health))
 

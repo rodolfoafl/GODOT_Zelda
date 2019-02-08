@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/cave.png-7e421e0c3ae189d008139da80d897f07.stex"
+path="res://.import/pickup_life.png-0197402c232a8604a1f7a84927998c00.stex"
 
 [deps]
 
-source_file="res://Art/cave.png"
-dest_files=[ "res://.import/cave.png-7e421e0c3ae189d008139da80d897f07.stex" ]
+source_file="res://Art/pickup_life.png"
+dest_files=[ "res://.import/pickup_life.png-0197402c232a8604a1f7a84927998c00.stex" ]
 
 [params]
 

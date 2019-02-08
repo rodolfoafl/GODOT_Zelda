@@ -10,8 +10,8 @@ var knock_direction = Vector2(0, 0)
 
 var sprite_direction = "down"
 
-export (int) var health = 1
-export (int) var damage = 1
+export (float) var health = 1
+export (float) var damage = 1
 
 var hit_stun = 0
 var default_color
@@ -101,4 +101,10 @@ func damage():
 			get_hurt()
 			hit_stun = 10
 			knock_direction = global_transform.origin - body.global_transform.origin
+			
+func instance_scene(scene):
+	var new_scene = scene.instance()
+	new_scene.global_position = global_position
+	get_parent().add_child(new_scene)
+	
 			

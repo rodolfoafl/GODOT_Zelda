@@ -59,8 +59,8 @@ collision_mask = 1
 collision/safe_margin = 0.08
 script = ExtResource( 1 )
 speed = 20
-health = 5
-damage = 1
+health = 2.0
+damage = 1.0
 
 [node name="Tween" type="Tween" parent="." index="0"]
 
